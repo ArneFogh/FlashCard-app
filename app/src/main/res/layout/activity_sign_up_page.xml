@@ -11,10 +11,10 @@
     <ProgressBar
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/goToForgotPassword"
+        android:layout_above="@id/goToMainActivity"
         android:layout_centerHorizontal="true"
         android:visibility="invisible"
-        android:id="@+id/progressBarMainActivity"
+        android:id="@+id/progressBarSignUp"
         android:layout_marginTop="10dp">
 
     </ProgressBar>
@@ -34,7 +34,7 @@
         android:layout_marginRight="30dp"
         android:layout_above="@+id/centerLine"
         android:layout_marginBottom="130dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="45dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
@@ -44,6 +44,16 @@
             android:textSize="45sp"
             android:textColor="@color/black"
             android:textStyle="bold">
+
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sign up page"
+            android:textAlignment="center"
+            android:textSize="22sp"
+            android:textColor="@color/black">
 
         </TextView>
 
@@ -70,7 +80,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/logInEmail"
+            android:id="@+id/signUpEmail"
             android:hint="Email"
             android:background="@color/lightblue"
             android:inputType="textEmailAddress">
@@ -91,7 +101,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/logInPassword"
+            android:id="@+id/signUpPassword"
             android:background="@color/lightblue"
             android:hint="Password">
 
@@ -106,18 +116,18 @@
         android:layout_marginTop="30dp"
         android:background="@drawable/button_design"
         android:layout_below="@id/password"
-        android:id="@+id/login">
+        android:id="@+id/signUp">
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="Log in"
             android:layout_centerInParent="true"
-            android:textColor="@color/white">
+            android:layout_marginStart="8dp"
+            android:text="Sign up"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold">
 
         </TextView>
     </RelativeLayout>
@@ -125,41 +135,15 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Forgot password"
+        android:text="Already have an account? Click here"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:id="@+id/goToForgotPassword"
+        android:id="@+id/goToMainActivity"
         android:textColor="@color/black"
-        android:layout_below="@id/login"
-        android:layout_marginTop="17dp"
+        android:layout_below="@id/signUp"
+        android:layout_marginTop="22dp"
         android:textAlignment="center">
 
     </TextView>
-
-    <RelativeLayout
-        android:id="@+id/signUpPage"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/button_design">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginStart="8dp"
-            android:text="New user! Sign up here"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            android:textStyle="bold">
-
-        </TextView>
-    </RelativeLayout>
 
 </RelativeLayout>
