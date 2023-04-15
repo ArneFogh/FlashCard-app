@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, FlashCardHome.class));
         }
 
+        //When the sign up button has been clicked, go to sign up page
         mgoToSignUpPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //When go to forgot password has been clicked, go to forgot password
         mgoToForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,16 +85,18 @@ public class MainActivity extends AppCompatActivity {
                 }
                 else{
                     //Login the user
-
                     mprogressBarMainActivity.setVisibility(View.VISIBLE);
 
+                    //Firebase authentication
                     firebaseAuth.signInWithEmailAndPassword(mail, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
+                            //If task is successful call the check mail verification
                             if (task.isSuccessful()){
                                 checkMailVerification();
                             }
                             else{
+                                //If task is not successful display this message
                                 Toast.makeText(getApplicationContext(), "Account does not exists", Toast.LENGTH_SHORT).show();
                                 mprogressBarMainActivity.setVisibility(View.INVISIBLE);
                             }
@@ -108,13 +112,16 @@ public class MainActivity extends AppCompatActivity {
     private void checkMailVerification(){
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();
 
+        //Firebase authentication. Check if user is verified, if it is, then go to the flash card home page
         if (firebaseUser.isEmailVerified()==true){
             Toast.makeText(getApplicationContext(), "Logged in", Toast.LENGTH_SHORT).show();
             finish();
             startActivity(new Intent(MainActivity.this, FlashCardHome.class));
         }
         else {
+            //Progressbar
             mprogressBarMainActivity.setVisibility(View.INVISIBLE);
+            //If the user isn't verified, show this message
             Toast.makeText(getApplicationContext(), "Verify your email first", Toast.LENGTH_SHORT).show();
             firebaseAuth.signOut();
         }

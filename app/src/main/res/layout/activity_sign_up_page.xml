@@ -61,6 +61,7 @@
             android:layout_marginTop="15dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:id="@+id/goToHomeFromForgotPassword"
             android:src="@drawable/_52007847_1086383465501330_1779704442420206746_n">
 
         </ImageView>
