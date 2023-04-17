@@ -19,6 +19,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//Arne
 public class SignUpPage extends AppCompatActivity {
 
 
@@ -30,7 +31,7 @@ public class SignUpPage extends AppCompatActivity {
     private TextView mgoToMainActivity;
     private FirebaseAuth firebaseAuth;
 
-
+//Arne
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,8 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
 
+        //Arne
+
         //When logo is clicked go to main activity
         mgoToHomeFromSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,6 +69,7 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
 
+        //Arne
         //When sign up button is clicked
         msignUp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +112,8 @@ public class SignUpPage extends AppCompatActivity {
             }
         });
     }
+
+    //Arne
 
     //Send email verification
     private void sendEmailVerification(){

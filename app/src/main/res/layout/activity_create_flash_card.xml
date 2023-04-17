@@ -11,18 +11,6 @@
     tools:context=".MainActivity">
 
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/goToForgotPassword"
-        android:layout_centerHorizontal="true"
-        android:visibility="invisible"
-        android:id="@+id/progressBarMainActivity"
-        android:layout_marginTop="10dp">
-
-    </ProgressBar>
-
-
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -35,29 +23,22 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_above="@+id/centerLine"
-        android:layout_marginBottom="130dp"
-        android:layout_marginTop="45dp"
+        android:layout_above="@+id/createDeckTitle"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FlashCards"
+            android:text="Create deck"
             android:textAlignment="center"
-            android:textSize="45sp"
+            android:textSize="37sp"
             android:textColor="@color/black"
             android:textStyle="bold">
 
         </TextView>
 
-        <!-- Flash card logo -->
-        <ImageView
-            android:layout_marginTop="15dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/_52007847_1086383465501330_1779704442420206746_n">
 
-        </ImageView>
 
 
     </LinearLayout>
@@ -67,8 +48,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/centerLine"
-        android:layout_marginBottom="10dp"
-        android:id="@+id/email"
+        android:layout_marginBottom="180dp"
+        android:id="@+id/createDeckTitle"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp">
 
@@ -76,75 +57,56 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/logInEmail"
-            android:hint="Email"
-            android:background="@color/lightblue"
-            android:inputType="textEmailAddress">
+            android:hint="Title"
+            android:background="@color/lightblue">
 
         </EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Sign in password -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerLine"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/createQuestion"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/question"
+            android:hint="Front card question"
+            android:background="@color/lightblue">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/centerLine"
         android:layout_marginTop="10dp"
-        android:id="@+id/password"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/createAnswer"
         android:layout_marginRight="30dp"
-        android:layout_marginLeft="30dp"
-        app:passwordToggleEnabled="true">
+        android:layout_marginLeft="30dp">
 
         <EditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/logInPassword"
-            android:background="@color/lightblue"
-            android:hint="Password">
+            android:layout_height="150dp"
+            android:id="@+id/answer"
+            android:hint="Back card answer"
+            android:background="@color/lightblue">
 
         </EditText>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!-- Login button -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/button_design"
-        android:layout_below="@id/password"
-        android:id="@+id/login">
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:layout_marginStart="8dp"
-            android:textSize="16sp"
-            android:text="Log in"
-            android:layout_centerInParent="true"
-            android:textColor="@color/white">
 
-        </TextView>
-    </RelativeLayout>
-
-    <!-- Go to forgot password clickable text -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Forgot password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:id="@+id/goToForgotPassword"
-        android:textColor="@color/black"
-        android:layout_below="@id/login"
-        android:layout_marginTop="17dp"
-        android:textAlignment="center">
-
-    </TextView>
-
-    <!--Sign up button -->
+    <!--When clicked the flash cards will be saved to firebase and can now
+     used by the customer-->
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
@@ -154,7 +116,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:layout_marginBottom="30dp"
-        android:id="@+id/goToSignUpPage"
+        android:id="@+id/saveFlashCard"
         android:background="@drawable/button_design">
 
 
@@ -163,12 +125,24 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:layout_marginStart="8dp"
-            android:text="New user! Sign up here"
+            android:text="Save flash card"
             android:textColor="@color/white"
             android:textSize="16sp"
             android:textStyle="bold">
 
         </TextView>
     </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveFlashCard"
+        android:text="Create new card"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        android:textColorHint="@color/black"
+        android:textStyle="bold">
+
+    </TextView>
 
 </RelativeLayout>

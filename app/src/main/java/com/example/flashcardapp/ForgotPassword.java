@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
+//Arne
+
 public class ForgotPassword extends AppCompatActivity {
 
     ProgressBar mprogressBarForgotPassword;
@@ -27,6 +29,7 @@ public class ForgotPassword extends AppCompatActivity {
 
     private FirebaseAuth firebaseAuth;
 
+    //Arne
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +55,8 @@ public class ForgotPassword extends AppCompatActivity {
             }
         });
 
+        //Arne
+
         //Go to the home page when clicked on the logo
         mgoToHomeFromForgotPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,6 +65,8 @@ public class ForgotPassword extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Arne
 
         //When clicked on recover password
         mrecoverPassword.setOnClickListener(new View.OnClickListener() {
@@ -95,10 +102,6 @@ public class ForgotPassword extends AppCompatActivity {
                 }
             }
         });
-
-
-
-
 
     }
 }

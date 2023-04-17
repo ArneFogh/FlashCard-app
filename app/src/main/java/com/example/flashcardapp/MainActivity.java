@@ -18,6 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//Arne
 public class MainActivity extends AppCompatActivity {
 
     //I will write an "m" in front of all of the names to better know what belongs to what
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth firebaseAuth;
 
 
-
+//Arne
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
             finish();
             startActivity(new Intent(MainActivity.this, FlashCardHome.class));
         }
+        //Arne
 
         //When the sign up button has been clicked, go to sign up page
         mgoToSignUpPage.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, ForgotPassword.class));
             }
         });
+
+        //Arne
 
         mlogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,6 +112,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
+
+    //Arne
 
     private void checkMailVerification(){
         FirebaseUser firebaseUser = firebaseAuth.getCurrentUser();

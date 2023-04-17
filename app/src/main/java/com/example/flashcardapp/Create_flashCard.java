@@ -4,16 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FlashCardHome extends AppCompatActivity {
+public class Create_flashCard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flash_card_home);
+        setContentView(R.layout.activity_create_flash_card);
 
         getSupportActionBar().hide();
-
-
-
     }
 }
