@@ -13,7 +13,7 @@ Fix a bug
 Implement a new feature
 To contribute, please follow these steps:
 
-Fork the project repository[(https://github.com/[project owner]/[project name])](https://github.com/ArneFogh/FlashCard-app/) to your GitHub account.
+Fork the project repository (https://github.com/ArneFogh/FlashCard-app/) to your GitHub account.
 Clone the forked repository to your local machine.
 Create a new branch for your contribution.
 Make your changes and commit them to the new branch.
