@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_above="@+id/createDeckTitle"
+        android:layout_above="@+id/deckTitle"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
         android:orientation="vertical">
@@ -48,14 +48,14 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/centerLine"
         android:layout_marginBottom="180dp"
-        android:id="@+id/createDeckTitle"
+        android:id="@+id/deckTitle"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/logInEmail"
+            android:id="@+id/createDeckTitle"
             android:hint="Title"
             android:background="@color/lightblue">
 
@@ -68,14 +68,15 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/centerLine"
         android:layout_marginBottom="10dp"
-        android:id="@+id/createQuestion"
+        android:id="@+id/question"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:id="@+id/question"
+            android:id="@+id/createQuestion"
+            android:text="Question"
             android:hint="Front card question"
             android:background="@color/lightblue">
 
@@ -89,14 +90,15 @@
         android:layout_below="@+id/centerLine"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:id="@+id/createAnswer"
+        android:id="@+id/answer"
         android:layout_marginRight="30dp"
         android:layout_marginLeft="30dp">
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="150dp"
-            android:id="@+id/answer"
+            android:id="@+id/createAnswer"
+            android:text="Answer"
             android:hint="Back card answer"
             android:background="@color/lightblue">
 
@@ -148,5 +150,15 @@
         android:textStyle="bold">
 
     </TextView>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        android:id="@+id/progressBarOfCreateFlashCard"
+        android:layout_marginTop="10dp">
+
+    </ProgressBar>
 
 </RelativeLayout>
