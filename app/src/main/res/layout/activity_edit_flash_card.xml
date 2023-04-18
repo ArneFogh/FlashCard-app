@@ -1,9 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<!-- Arne -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".Edit_flashCard">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerLine"
+        android:layout_centerInParent="true">
+    </RelativeLayout>
+
+    <!-- Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_above="@+id/editDeckTitle"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Edit deck"
+            android:textAlignment="center"
+            android:textSize="37sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <!-- Create flash card title -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerLine"
+        android:layout_marginBottom="180dp"
+        android:id="@+id/editDeckTitle"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/logInEmail"
+            android:hint="Here is the old title"
+            android:background="@color/lightblue">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Create front side flash card question -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/centerLine"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/editQuestion"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/question"
+            android:hint="Edit front card question"
+            android:background="@color/lightblue">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Create back side flash card answer -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/centerLine"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:id="@+id/editAnswer"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:id="@+id/answer"
+            android:hint="Edit back card answer"
+            android:background="@color/lightblue">
+
+        </EditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+    <!--When clicked the flash cards will be saved to firebase and can now
+     used by the customer-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/saveEditFlashCard"
+        android:background="@drawable/button_design">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:text="Save flash card"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold">
+
+        </TextView>
+    </RelativeLayout>
+
+    <!-- When clicked on the text, go to the next slide and create a new
+    flash card in the same group -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/saveEditFlashCard"
+        android:text="Edit next card"
+        android:id="@+id/editNextSlide"
+        android:textAlignment="center"
+        android:layout_marginBottom="40dp"
+        android:textColorHint="@color/black"
+        android:textStyle="bold">
+
+    </TextView>
+
+</RelativeLayout>
