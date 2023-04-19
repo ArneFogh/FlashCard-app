@@ -6,44 +6,6 @@
     android:layout_height="match_parent"
     android:background="#DFDEDE"
     tools:context=".FlashCardHome">
-    
-    
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/recyclerView"
-        android:scrollbars="vertical">
-
-    </androidx.recyclerview.widget.RecyclerView>
-
-
-<!--
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Flash cards"
-        android:textAlignment="center"
-        android:layout_marginTop="50dp"
-        android:textSize="40sp"
-        android:textColor="@color/black"
-        android:textStyle="bold"
-        android:id="@+id/titleText">
-
-    </TextView>
-    -->
-
-    <!--
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/flashcard_group_design"
-        android:layout_below="@id/titleText"
-        android:id="@+id/flashCards">
-    </RelativeLayout>
-    -->
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -59,5 +21,13 @@
         app:maxImageSize="40dp">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </RelativeLayout>
