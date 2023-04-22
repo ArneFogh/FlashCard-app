@@ -28,6 +28,7 @@ import com.google.firebase.firestore.Query;
 
 import java.util.Date;
 
+//Arne
 public class FlashCardHome extends AppCompatActivity {
 
 

@@ -19,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 //Arne
 
+//Arne
 public class ForgotPassword extends AppCompatActivity {
 
     ProgressBar mprogressBarForgotPassword;

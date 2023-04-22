@@ -24,6 +24,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 import java.util.HashMap;
 import java.util.Map;
 
+//Arne
 public class Create_flashCard extends AppCompatActivity {
 
     EditText mcreateDeckTitle, mcreateQuestion, mcreateAnswer;

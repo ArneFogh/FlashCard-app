@@ -1,5 +1,6 @@
 package com.example.flashcardapp;
 
+//Arne
 public class firebaseModel {
 
     private String title;

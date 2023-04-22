@@ -15,6 +15,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+//Arne
 public class FlashCardDetails extends AppCompatActivity {
 
     LinearLayout mgoBackToFlashCardHome;
