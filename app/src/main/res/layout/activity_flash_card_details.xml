@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Arne -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="#F1F0F0"
+    tools:context=".Create_flashCard">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/centerLine"
+        android:layout_centerInParent="true">
+    </RelativeLayout>
+
+    <!-- Text -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:id="@+id/goBackToFlashCardHome"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashCardTitleDetail"
+            android:text="Flash card title"
+            android:textAlignment="center"
+            android:textSize="37sp"
+            android:textColor="@color/black"
+            android:textStyle="bold">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/flipFlashCard"
+        android:text="Flip flash card"
+        android:layout_below="@id/centerLine"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="#68AAFF"
+        android:paddingTop="55dp"
+        android:textSize="17sp">
+
+    </TextView>
+
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/flipFlashCard"
+        android:elevation="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="150dp"
+        android:id="@+id/goToNextFlashCard"
+        android:background="@drawable/next_card">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Next"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:elevation="5dp"
+        android:layout_below="@id/flipFlashCard"
+        android:id="@+id/goToBackFlashCard"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/back_card">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Back"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="17sp">
+
+        </TextView>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        android:layout_above="@id/centerLine"
+        app:cardCornerRadius="15dp"
+        app:cardMaxElevation="5dp"
+        android:paddingBottom="15dp"
+        android:id="@+id/flashCardLayout">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/flashCardDetail"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:background="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:id="@+id/flashCardContentDetail"
+                    android:paddingTop="75dp"
+                    android:paddingBottom="60dp"
+                    android:text="Flash card question"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textColor="#1877F2"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp">
+
+                </TextView>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

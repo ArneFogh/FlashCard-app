@@ -39,6 +39,8 @@ public class FlashCardHome extends AppCompatActivity {
     FirebaseFirestore firebaseFirestore;
     FirestoreRecyclerAdapter<firebaseModel, FlashCardViewHolder> flashCardAdapter;
 
+    String deckId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +51,7 @@ public class FlashCardHome extends AppCompatActivity {
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         firebaseFirestore = FirebaseFirestore.getInstance();
+        //deckId = firebaseFirestore.collection("flashCards").document(firebaseUser.getUid()).collection("myFlashCards").document().getId();
 
         getSupportActionBar().setTitle("All flash cards");
         mcreateFlashCardFab.setOnClickListener(new View.OnClickListener() {
@@ -57,6 +60,11 @@ public class FlashCardHome extends AppCompatActivity {
                 startActivity(new Intent(FlashCardHome.this, Create_flashCard.class));
             }
         });
+
+        //            firebaseFirestore.collection("flashCards").document(firebaseUser.getUid()).collection("myFlashCards").document(deckId).collection("cards").document(flashcardId);
+        //            firebaseFirestore.collection("flashCards").document(firebaseUser.getUid()).collection("myFlashCards").document();
+
+        // firebaseFirestore.collection("flashCards").document(firebaseUser.getUid()).collection("myFlashCards").document(deckId).collection("cards").orderBy("title", Query.Direction.ASCENDING);
 
         Query query = firebaseFirestore.collection("flashCards").document(firebaseUser.getUid()).collection("myFlashCards").orderBy("title", Query.Direction.ASCENDING);
         FirestoreRecyclerOptions<firebaseModel> allUserFlashCards = new FirestoreRecyclerOptions.Builder<firebaseModel>().setQuery(query, firebaseModel.class).build();
@@ -70,6 +78,23 @@ public class FlashCardHome extends AppCompatActivity {
                 flashCardViewHolder.flashCardTitle.setText(firebaseModel.getTitle());
                 //flashCardViewHolder.flashCardAnswer.setText(firebaseModel.getAnswer());
                 //flashCardViewHolder.flashCardQuestion.setText(firebaseModel.getQuestion());
+
+                String deckId = flashCardAdapter.getSnapshots().getSnapshot(i).getId();
+                flashCardViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+
+
+
+                        Intent intent = new Intent(v.getContext(), FlashCardDetails.class);
+                        intent.putExtra("title", firebaseModel.getTitle());
+                        intent.putExtra("answer", firebaseModel.getAnswer());
+                        intent.putExtra("question", firebaseModel.getQuestion());
+                        intent.putExtra("deckId", deckId);
+
+                        v.getContext().startActivity(intent);
+                    }
+                });
 
             }
 

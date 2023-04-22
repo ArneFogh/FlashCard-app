@@ -12,6 +12,9 @@
         android:theme="@style/Theme.FlashCardApp"
         tools:targetApi="31">
         <activity
+            android:name=".FlashCardDetails"
+            android:exported="false" />
+        <activity
             android:name=".Edit_flashCard"
             android:exported="false" />
         <activity

@@ -39,4 +39,9 @@ public class firebaseModel {
     public void setAnswer(String answer) {
         this.answer = answer;
     }
+
+    public void resetCard() {
+        this.question = "";
+        this.answer = "";
+    }
 }

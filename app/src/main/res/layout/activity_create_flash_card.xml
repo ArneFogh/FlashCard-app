@@ -76,7 +76,6 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:id="@+id/createQuestion"
-            android:text="Question"
             android:hint="Front card question"
             android:background="@color/lightblue">
 
@@ -98,7 +97,6 @@
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:id="@+id/createAnswer"
-            android:text="Answer"
             android:hint="Back card answer"
             android:background="@color/lightblue">
 
@@ -143,7 +141,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/saveFlashCard"
         android:text="Create new card"
-        android:id="@+id/goToNextSlide"
+        android:id="@+id/createNextFlashCard"
         android:textAlignment="center"
         android:layout_marginBottom="40dp"
         android:textColorHint="@color/black"
